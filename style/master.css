@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+/* font-family: 'Roboto', sans-serif; */
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body {font-family: 'Roboto', sans-serif;}
+@media screen and (min-width: 1200px) {
+    .container {max-width: 1260px !important;}
+}
+
+a,
+a:link,
+a:hover,
+a:active,
+a:visited {text-decoration: none;}
+p {
+    color: #4F4F4F;
+    font-size: 16px;
+}
+img {width: 100%;}
+ul, ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* navber style strat */
+.navbar {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.2s;
+    padding: 0;
+    position: relative;
+    background: #fff;
+}
+.navbar .navbar-toggler {color: #000;}
+.navbar .brand {margin-right: 25px;}
+.navbar .brand img {
+    transition: all 0.2s;
+    max-width: 225px;
+    width: 100%;
+    max-height: 50px;
+}
+.navbar .navbar-nav .nav-link img {width: 20px;}
+.navbar .navbar-nav span.nav-link,
+.navbar .navbar-nav a.nav-link {
+    display: inline-block;
+    transition: all 0.2s;
+    line-height: 75px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 15px;
+    color: #000;
+    height: 75px;
+    padding: 0;
+    font-weight: 600;
+    position: relative;
+    text-transform: uppercase;
+}
+.navbar .navbar-nav span.nav-link:hover,
+.navbar .navbar-nav a.nav-link:hover,
+.navbar .navbar-nav span.nav-link.active,
+.navbar .navbar-nav a.nav-link.active {color: #912790;}
+.navbar .navbar-nav li:first-child a {margin-left: 0;}
+.navbar .navbar-nav li:last-child a {margin-right: 0;}
+
+.navbar .switch_btn {
+    align-items: center;
+    display: flex;
+}
+.navbar .switch {
+    display: inline-block;
+    position: relative;
+    width: 56px;
+    height: 30px;
+    cursor: pointer;
+}
+.navbar .switch [type="checkbox"]:checked + span + small {display: none;}
+.navbar .switch input { 
+  	opacity: 0;
+  	width: 0;
+  	height: 0;
+}
+.navbar .switch .slider {
+    position: absolute;
+    transition: .4s;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+}
+.navbar .switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 4px;
+    bottom: 3px;
+    transition: .4s;
+    background-color: #fff;
+}
+.navbar .switch input:checked + .slider {background-color: #912790;}
+.navbar .switch input:checked + .slider:before {
+    transform: translateX(26px);
+    border: none;
+    top: 3px;
+    left: 5px;
+    width: 22px;
+    height: 22px;
+    background: #fff;
+}
+.navbar .switch .slider.round {
+    border-radius: 34px;
+    height: 28px;
+    background: #E5E8EF;
+}
+.navbar .slider.round:before {
+    border-radius: 50%;
+    border: none;
+    top: 3px;
+    left: 4px;
+    width: 24px;
+    z-index: 99;
+    height: 24px;
+    background: #9CA8BA;
+}
+.navbar .switch .on {
+    color: #fff;
+    left: 8px;
+}
+.navbar .switch .on, .navbar .switch .off {
+    line-height: 28px;
+    position: absolute;
+    height: 26px;
+    top: 0;
+    z-index: 9;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.navbar .switch .off {
+    color: #9CA8BA;
+    right: 5px;
+}
+
+@media screen and (min-width: 992px) {
+    .navbar .navbar-collapse {
+        justify-content: flex-end;
+        display: flex;
+    }
+}
+@media screen and (max-width: 991px) {
+    .navbar-expand-lg > .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .navbar::after {
+        background: rgba(0, 0, 0, 0.05);
+        display: inline-block;
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1px;
+        top: 75px;
+        left: 0;
+    }
+    .navbar .navbar-toggler {
+        display: inline-block;
+        line-height: 75px;
+        font-weight: bold;
+        font-size: 28px;
+        outline: none;
+        height: 75px;
+        border: none;
+        color: #000;
+        padding: 0;
+        outline: none;
+        box-shadow: none;
+    }
+    .navbar .navbar-nav span.nav-link,
+    .navbar .navbar-nav a.nav-link {
+        border-top: 1px solid #ddd;
+        line-height: 40px;
+        height: 40px;
+        width: 100%;
+        color: #000;
+        margin: 0;
+    }
+    .navbar .navbar-nav li:first-child a.nav-link {border-top: none;}
+    .navbar .navbar-nav a.nav-link.active,
+    .navbar .navbar-nav a.nav-link:hover,
+    .navbar .navbar-nav span.nav-link.active,
+    .navbar .navbar-nav span.nav-link:hover {color: #912790;}
+}
+/* navber style end */
+
+
+
+/* section title style */
+.section_title {
+    justify-content: center;
+    margin-bottom: 45px;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    align-items: center;
+}
+.section_title h4 {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-transform: capitalize;
+    color: #3B154E;
+    font-weight: 500;
+    font-size: 30px;
+    margin: 0 25px;
+    padding: 5px 0;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.section_title img {
+    max-width: 85px;
+    width: auto;
+}
+@media screen and (max-width: 576px) {
+    .section_title h4 {
+        font-size: 24px;
+        min-width: 100%;
+    }
+    p {font-size: 15px;}
+}
+/* section title end */
+
+
+
+/* footer style start */
+.footer_section {
+    padding: 30px 0 0;
+    background: #fff;
+}
+.footer_section .content_box {margin-bottom: 30px;}
+.footer_section .content_box h4 {
+    line-height: 18px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #4F4F4F;
+}
+.footer_section .content_box p {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+    margin: 0;
+}
+.footer_section .content_box .footer_img {
+    align-items: flex-start;
+    display: flex;
+}
+.footer_section .content_box img {
+    margin-right: 5px;
+    max-height: 25px;
+    width: auto;
+}
+@media screen and (max-width: 768px) {
+    .footer_section .content_box p br {display: none;}
+}
+/* footer style end */
